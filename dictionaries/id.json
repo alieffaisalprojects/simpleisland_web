@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "downloadLink": "Unduh"
+  },
+  "hero": {
+    "title": "Simple Island",
+    "author": "by Faisal Adriansyah",
+    "subtitle": "Semua yang kamu butuhkan dalam satu pulau interaktif yang ringan dan pengalaman yg menyenangkan."
+  },
+  "gallery": {
+    "ariaLabel": "Galeri Pratinjau Simple Island",
+    "captionPrefix": "Tampilan Antarmuka"
+  },
+  "download": {
+    "title": "Siap mencoba Simple Island?",
+    "description": "Tersedia untuk sistem operasi Windows. Ringan, cepat, dan tanpa konfigurasi rumit.",
+    "buttonText": "Unduh untuk Windows (.exe)",
+    "versionInfo": "Versi 1.0.0 • Windows 10 / 11 (64-bit)"
+  },
+  "footer": {
+    "copyright": "Hak Cipta © 2026 Faisal Adriansyah. Seluruh hak cipta dilindungi."
+  }
+}
