@@ -20,9 +20,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="text-5xl sm:text-7xl md:text-[88px] font-semibold tracking-[-0.035em] leading-[1.04] text-center btn-shine"
+            className="text-[2.5rem] min-[400px]:text-5xl sm:text-7xl md:text-[88px] font-semibold tracking-[-0.035em] leading-[1.04] text-center"
           >
-            {t.hero.title}
+            <span className="btn-shine inline-block whitespace-nowrap pb-[0.08em]">
+              Simple Island
+            </span>
           </motion.h1>
 
           <div className="relative mt-2 sm:mt-3">
@@ -38,7 +40,7 @@ export default function Hero() {
               }}
               className="cursor-pointer text-xs sm:text-sm md:text-base font-medium tracking-[-0.01em] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors focus:outline-none"
             >
-              {t.hero.author}
+              by Faisal
             </motion.button>
             <AnimatePresence>
               {showPopup && (

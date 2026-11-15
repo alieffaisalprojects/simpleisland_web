@@ -27,60 +27,48 @@ body {
   overflow-x: hidden;
 }
 
-/* Efek Shine disesuaikan dari Uiverse.io untuk teks judul besar */
+/* Shine mulus & tanpa batas: kiri (Simple) -> kanan (Island)
+   - Gradient periodik: warna ujung kiri = ujung kanan tile
+   - Tile selebar 200% teks, digeser tepat 1 tile per siklus
+   - Band kilau lebar dengan banyak stop warna agar transisinya halus */
 .btn-shine {
-  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
-  background-size: 200% auto;
-  color: #fff;
+  background-image: linear-gradient(
+    90deg,
+    #868686 0%,
+    #868686 22%,
+    #929292 30%,
+    #b4b4b4 38%,
+    #e2e2e2 45%,
+    #ffffff 50%,
+    #e2e2e2 55%,
+    #b4b4b4 62%,
+    #929292 70%,
+    #868686 78%,
+    #868686 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+  background-position: 0% 0;
+  color: #868686; /* fallback */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 3s infinite linear;
-  animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
+  animation: shine 4s linear infinite;
+  will-change: background-position;
 }
 
-@-moz-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-webkit-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
-@-o-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 180px;
-  }
-  100% {
-    background-position: 180px;
-  }
-}
 @keyframes shine {
-  0% {
-    background-position: 0;
+  from {
+    background-position: 0% 0;
   }
-  60% {
-    background-position: 180px;
+  to {
+    background-position: -200% 0;
   }
-  100% {
-    background-position: 180px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine {
+    animation: none;
   }
 }
 
