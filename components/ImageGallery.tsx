@@ -14,7 +14,7 @@ export default function ImageGallery() {
   const sectionRef = useRef<HTMLElement>(null);
   const [showPopup, setShowPopup] = useState(false);
 
-  // Efek parallax
+  // Efek paralax
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
