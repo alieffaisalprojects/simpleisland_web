@@ -40,7 +40,7 @@ export default function Hero() {
               }}
               className="cursor-pointer text-xs sm:text-sm md:text-base font-medium tracking-[-0.01em] text-[#6e6e73] hover:text-[#1d1d1f] transition-colors focus:outline-none"
             >
-              by Faisal
+              by Faisal Adriansyah
             </motion.button>
             <AnimatePresence>
               {showPopup && (
